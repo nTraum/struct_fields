@@ -6,6 +6,7 @@ defmodule StructFields.Mixfile do
      version: "0.1.0",
      description: description,
      elixir: "~> 1.2",
+     package: package,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps]
