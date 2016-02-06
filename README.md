@@ -1,6 +1,7 @@
 # StructFields
 
 [![Build Status](https://travis-ci.org/nTraum/struct_fields.svg?branch=master)](https://travis-ci.org/nTraum/struct_fields)
+[![Hex.pm](https://img.shields.io/hexpm/v/struct_fields.svg)](https://hex.pm/packages/struct_fields)
 
 Tiny module to easily get a list of fields for structs.
 
