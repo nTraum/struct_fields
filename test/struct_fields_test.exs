@@ -14,14 +14,14 @@ defmodule StructFieldsTest do
   end
 
   test "use declared anywhere at top level" do
-    defmodule MyModule do
+    defmodule TestGreeter do
       use StructFields
 
       defstruct greeting: :hello
-      def greet(%MyModule{greeting: g}), do: g
+      def greet(%TestGreeter{greeting: g}), do: g
     end
 
-    assert length(MyModule.fields) == 1
-    assert Enum.member?(MyModule.fields, :greeting)
+    assert length(TestGreeter.fields) == 1
+    assert Enum.member?(TestGreeter.fields, :greeting)
   end
 end
