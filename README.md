@@ -20,9 +20,7 @@ MyModule.fields
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
-
-1. Add struct_fields to your list of dependencies in `mix.exs`:
+1. Add `struct_fields` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -30,10 +28,14 @@ def deps do
 end
 ```
 
-2. Ensure struct_fields is started before your application:
+2. Ensure `struct_fields` is started before your application:
 
 ```elixir
 def application do
   [applications: [:struct_fields]]
 end
 ```
+
+## Documentation
+
+http://hexdocs.pm/struct_fields
