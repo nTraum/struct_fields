@@ -21,6 +21,7 @@ defmodule StructFields do
       @before_compile StructFields
     end
   end
+
   defmacro __before_compile__(_env) do
     quote do
       def fields do
