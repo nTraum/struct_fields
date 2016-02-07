@@ -1,27 +1,24 @@
 defmodule StructFieldsTest do
   use ExUnit.Case
+  doctest StructFields
 
   test "fields" do
     defmodule MyModule do
-      defstruct [:foo, :bar]
-
       use StructFields
+
+      defstruct [:foo, :bar]
     end
 
-    assert length(MyModule.fields) == 2
-    assert Enum.member?(MyModule.fields, :foo)
-    assert Enum.member?(MyModule.fields, :bar)
+    assert MyModule.fields == [:bar, :foo]
   end
 
-  test "use declared anywhere at top level" do
-    defmodule TestGreeter do
-      use StructFields
+  test "ignore option" do
+    defmodule MyModuleIgnoreFields do
+      use StructFields, ignore: [:foo]
 
-      defstruct greeting: :hello
-      def greet(%TestGreeter{greeting: g}), do: g
+      defstruct [:foo, :bar, :baz]
     end
 
-    assert length(TestGreeter.fields) == 1
-    assert Enum.member?(TestGreeter.fields, :greeting)
+    assert MyModuleIgnoreFields.fields == [:bar, :baz]
   end
 end
