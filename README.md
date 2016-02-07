@@ -25,7 +25,7 @@ MyModule.fields
 
 ```elixir
 def deps do
-  [{:struct_fields, "~> 0.1.0"}]
+  [{:struct_fields, "~> 0.2.0"}]
 end
 ```
 
