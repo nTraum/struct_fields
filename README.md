@@ -9,14 +9,13 @@ Tiny module to easily get a list of fields for structs.
 
 ```elixir
 defmodule MyModule do
-  defstruct [:foo, :bar]
-
-  # Use the module
   use StructFields
+
+  defstruct [:foo, :bar]
 end
 
 MyModule.fields
-#=> [:foo, :bar]
+#=> [:bar, :foo]
 ```
 
 ## Installation
