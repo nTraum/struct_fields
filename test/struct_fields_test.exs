@@ -3,13 +3,13 @@ defmodule StructFieldsTest do
   doctest StructFields
 
   test "fields" do
-    defmodule MyModule do
+    defmodule MyStruct do
       use StructFields
 
       defstruct [:foo, :bar]
     end
 
-    assert MyModule.fields == [:bar, :foo]
+    assert MyStruct.fields == [:bar, :foo]
   end
 
   test "ignore option" do
